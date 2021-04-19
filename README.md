@@ -3,9 +3,9 @@ Holds mail delivery in postfix if its a holiday, or a specified day or/and time.
 
 I wrote this to set a specific user on hold queue in postfix for a specific time (e.g. when he's in vacation and on specific days and times during the week) or in general when we have holidays.
 
-At the moment the vavcation part only works with one user due to the vacation settings only implemented for this particular case.
+At the moment the vacation part only works with one user due to the vacation settings only implemented for this particular case.
 
-The general hold would work for as many mail adresses you put in the hold file, even whole domains.
+The general hold for holidays would work for as many mail adresses you put in the hold file, even whole domains.
 
 holiday.py uses the python module found here:
 
