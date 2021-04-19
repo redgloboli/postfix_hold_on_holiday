@@ -39,7 +39,7 @@ elif [[ ($VDATE == $VDAYFROM) && ($NOW > $VTIMEFROM) ]]; then
    grep -qsxF 'redirect "user@redirect.to";' /path/to/sieve-script/sieve/sogo.sieve || printf "redirect \"user@redirect.to\";\n" >> /path/to/sieve-script/sogo.sieve
    chown vmail:vmail /path/to/sieve-script/sieve/sogo.sieve
    chmod 600 /path/to/sieve-script/sieve/sogo.sieve
-   ln -fs sieve/sogo.sieve /path/to/sieve-script/.dovecot.sieve
+   ln -fs sieve-script/sogo.sieve /path/to/sieve-script/.dovecot.sieve
    sed -i 's|[#,]||g' /etc/postfix/hold
    /usr/sbin/postmap hash:/etc/postfix/hold
 
