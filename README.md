@@ -7,6 +7,8 @@ At the moment the vacation part only works with one user due to the vacation set
 
 The general hold for holidays would work for as many mail adresses you put in the hold file, even whole domains.
 
+I'm using [SOGo](https://www.sogo.nu/) as my webmail fronted that's why i use sogo.sieve, but this depends on your sieve implemenation.
+
 holiday.py uses the python module found here:
 
 https://pypi.org/project/holidays/
