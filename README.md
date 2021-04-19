@@ -1,7 +1,7 @@
 # postfix_hold_on_holiday
 Holds mail delivery in postfix if its a holiday, or a specified day or/and time.
 
-I wrote this to set a specific user on hold queue in postfix for a specific time (e.g. when he's in vacation and on specific days and times during the week) or in general when we have holidays.
+I wrote this to set a specific user on hold queue in postfix for a specific time (e.g. when he's on vacation and for specific days and times during the week) or in general when we have holidays.
 
 At the moment the vacation part only works with one user due to the vacation settings only implemented for this particular case.
 
