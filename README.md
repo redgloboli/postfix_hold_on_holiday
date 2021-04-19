@@ -25,3 +25,6 @@ add a crontab entry like this (runs every full hour ):
 
 0 * * * * /bin/bash /etc/postfix/scripts/hold.sh
 
+I uploaded this to get some experience in scripting/coding and git usage. 
+
+Maye someone finds it useful :)
