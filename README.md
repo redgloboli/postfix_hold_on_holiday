@@ -15,7 +15,7 @@ https://pypi.org/project/holidays/
 
 create the file **hold** in **/etc/postfix**
 
-do a **'postmap hold'**
+do a **'postmap hash:hold'**
 
 add the line **check_recipient_access hash:/etc/postfix/hold** to **smtpd_recipient_restrictions =** in **main.cf**
 
