@@ -27,4 +27,4 @@ add a crontab entry like this (runs every full hour ):
 
 I uploaded this to get some experience in scripting/coding and git usage. 
 
-Maye someone finds it useful :)
+Maybe someone finds it useful :)
