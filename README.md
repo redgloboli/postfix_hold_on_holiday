@@ -9,7 +9,7 @@ The general hold for holidays would work for as many mail adresses you put in th
 
 I'm using [SOGo](https://www.sogo.nu/) as my webmail fronted that's why i use sogo.sieve, but this depends on your sieve implemenation.
 
-holiday.py uses the python module found here:
+holidays.py uses the python module found here:
 
 https://pypi.org/project/holidays/
 
