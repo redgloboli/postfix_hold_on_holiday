@@ -5,7 +5,7 @@
 
 # Configuration:
 # VDAYFROM = first day of vacation
-# VDATILL = last day of vacation
+# VDAYTILL = last day of vacation
 # VTIMEFROM = hold from time at first day of vacation
 # VTIMETILL = hold off at time from lat day of vacation
 # ONTIME = hold from time on saturday
@@ -20,7 +20,7 @@ OFFTIME=0600
 # Vacation
 VDATE=$(date +"%F")
 VDAYFROM=2021-03-29
-VDATILL=2021-04-01
+VDAYTILL=2021-04-01
 VTIMEFROM=0600
 VTIMETILL=2000
 
@@ -43,17 +43,17 @@ elif [[ ($VDATE == $VDAYFROM) && ($NOW > $VTIMEFROM) ]]; then
    sed -i 's|[#,]||g' /etc/postfix/hold
    /usr/sbin/postmap hash:/etc/postfix/hold
 
-elif [[ ($VDATE > $VDAYFROM) && ($VDATE < $VDATILL) ]]; then
+elif [[ ($VDATE > $VDAYFROM) && ($VDATE < $VDAYTILL) ]]; then
    # Vacation -> HOLD
    sed -i 's|[#,]||g' /etc/postfix/hold
    /usr/sbin/postmap hash:/etc/postfix/hold
 
-elif [[ ($VDATE == $VDATILL) && ($NOW < $VTIMETILL) ]]; then
+elif [[ ($VDATE == $VDAYTILL) && ($NOW < $VTIMETILL) ]]; then
    # Vacation -> HOLD
    sed -i 's|[#,]||g' /etc/postfix/hold
    /usr/sbin/postmap hash:/etc/postfix/hold
 
-elif [[ ($VDATE == $VDATILL) && ($NOW > $VTIMETILL) ]]; then
+elif [[ ($VDATE == $VDAYTILL) && ($NOW > $VTIMETILL) ]]; then
    # End of vacation -> undo redirect -> HOLD OFF
    sed -i '/redirect "user@redirect.to";/d' /path/to/sieve-script/sieve/sogo.sieve
    sed -i '/^[^#]/ s/^/#/' /etc/postfix/hold
