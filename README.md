@@ -13,11 +13,11 @@ https://pypi.org/project/holidays/
 
 **Usage:**
 
-create the file **'hold'** in'**/etc/postfix'**
+create the file **hold** in **/etc/postfix**
 
 do a **'postmap hold'**
 
-add the line **'check_recipient_access hash:/etc/postfix/hold'** to **'smtpd_recipient_restrictions ='** in **main.cf**
+add the line **check_recipient_access hash:/etc/postfix/hold** to **smtpd_recipient_restrictions =** in **main.cf**
 
 copy the scripts **hold.sh** and **holiday.py** to a location you like and adjust the script/crontab accordingly
 
