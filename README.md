@@ -11,7 +11,7 @@ holiday.py uses the python module found here:
 
 https://pypi.org/project/holidays/
 
-**Usage:**
+## **Usage:**
 
 create the file **hold** in **/etc/postfix**
 
@@ -24,6 +24,8 @@ copy the scripts **hold.sh** and **holiday.py** to a location you like and adjus
 add a crontab entry like this (runs every full hour ):
 
 0 * * * * /bin/bash /etc/postfix/scripts/hold.sh
+
+----------------------------------------------------------
 
 I uploaded this to get some experience in scripting/coding and git usage. 
 
